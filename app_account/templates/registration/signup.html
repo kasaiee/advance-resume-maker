@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<div class="signup-form-container">
+  <div class="signup-form">
+    <h2>Sign up</h2>
+    <form method="post">
+      {% csrf_token %}
+      
+      {{ form.username.label }}
+      {% render_field form.username placeholder="write yout username" %}
+      {{ form.username.help_text }}
+
+      {{ form.password1.label }}
+      {{ form.password1 }}
+      {{ form.password1.help_text }}
+
+      {{ form.password2.label }}
+      {{ form.password2 }}
+      {{ form.password2.help_text }}
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+</div>
+<style>
+  .signup-form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px
+  }
+  .signup-form {
+    width: 350px;
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    border-top: 4px solid #fe525e;
+  }
+  .signup-form h2 {
+    text-align: center
+  }
+  button {
+    background: #fe525e;
+    border: none;
+    padding: 11px;
+    color: #fff;
+  }
+  input {
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #fe525e;
+  }
+</style>
+{% endblock %}

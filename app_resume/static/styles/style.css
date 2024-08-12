@@ -1798,7 +1798,8 @@ body.theme-red ul li:before,
 body.theme-red ol li:before,
 body.theme-red a,
 body.theme-red .cv-main-nav > a:hover {
-  color: #fe525e; }
+  color: #fe525e;
+ }
 
 body.theme-red .cv-main-nav > a {
   color: #9da2a4; }
@@ -2078,3 +2079,13 @@ body.theme-green .progress .bar {
   .hide-print, .cv-slogan, .cv-main-nav,
   .cv-contact-nav, .cv-contact, .cv-contact-morph, .theme-settings {
     display: none; } }
+
+.action-buttons {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  width: 960px;
+  padding: 4px 25px;
+  z-index: 51;
+  border-bottom: 4px solid #fe525e;
+}
