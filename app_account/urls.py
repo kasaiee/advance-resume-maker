@@ -19,7 +19,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from app_resume import views
-from .views import SignUpView, my_login
+from .views import SignUpView
 
 urlpatterns = [
     path("accounts/signup/", SignUpView.as_view(), name="signup"),
