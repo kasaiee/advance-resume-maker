@@ -8,6 +8,7 @@ class Resume(models.Model):
     job_title = models.CharField(max_length=70, null=True)
     about = models.TextField(null=True)
     field_type = models.CharField(max_length=70, null=True)
+    avatar = models.ImageField(upload_to='avatars/', null=True)
 
     def __str__(self):
         return self.user.username
@@ -23,3 +24,7 @@ class WorkExperience(models.Model):
 
     def __str__(self):
         return self.title
+
+class Education(models.Model):
+    title = models.CharField(max_length=250, null=True)
+    description = models.TextField(null=True)

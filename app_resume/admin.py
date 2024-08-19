@@ -1,5 +1,5 @@
 from django.contrib import admin
-from app_resume.models import Resume, WorkExperience
+from app_resume.models import Resume, WorkExperience, Education
 
 class ResumeAdmin(admin.ModelAdmin):
     list_display = ('user', 'job_title', 'about', 'field_type')
@@ -13,3 +13,5 @@ class WorkExperienceAdmin(admin.ModelAdmin):
     list_filter = ('resume', )
 
 admin.site.register(WorkExperience, WorkExperienceAdmin)
+
+admin.site.register(Education)

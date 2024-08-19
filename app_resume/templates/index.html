@@ -16,12 +16,12 @@
 
       <div class="cv-author">
          <div class="cv-photo side">
-            <img src="{% static 'images/photo.jpg' %}" alt="" />
+            <img src="{{ user.resume.avatar.url }}" alt="" />
          </div>
 
          <h1>
-            Paul
-            <br/>Pixel<span class="comma">,</span>
+            {{ user.first_name }}
+            <br/>{{ user.last_name }}<span class="comma">,</span>
             <small>Web Designer & Web developer</small>
          </h1>
       </div>

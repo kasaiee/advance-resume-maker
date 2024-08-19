@@ -5,7 +5,7 @@
    <head>
       <meta charset="utf-8" />
       <title>
-         Pixel Paul - Curiculum Vitae
+         {{ user.first_name }} {{ user.last_name }} - Curiculum Vitae
       </title>
 
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
@@ -330,6 +330,8 @@
       <script type="text/javascript" src="{% static 'scripts/vendor/jquery.magnific-popup.min.js' %}"></script>
       <script type="text/javascript" src="{% static 'scripts/cv.js' %}"></script>
       <!-- endbuild -->
+
+      {% block extra_js %}{% endblock extra_js %}
 
       <script>
          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

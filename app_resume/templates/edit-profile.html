@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+    {{ resume_form.as_p }}
+    {{ form.as_p }}
+    {% csrf_token %}
+
+    <input type="submit" />
+    <hr />
+
+    <div onclick="handleClick()">add</div>
+    <div id="education-form-set">
+        <div id="education-row">
+            {{ education_form.as_p }}
+        </div>
+    <div>
+        
+    </form>
+    
+    {% endblock content %}
+    
+    {% block extra_js %}
+<script>
+    function handleClick () {
+        const html = $('#education-row').html()
+        $('#education-form-set').append(html)
+    }
+</script>
+{% endblock extra_js %}
